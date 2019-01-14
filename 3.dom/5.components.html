@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Components</title>
+</head>
+
+<body>
+  <div id="viewport" />
+  <script>
+    const viewport = document.getElementById('viewport')
+
+    // we can use crel to create an element
+    const title = crel('h1', 'this is a title')
+    viewport.appendChild(title)
+
+    // a component is a function that receives all data it needs,
+    // and returns a view (in this case: a DOM node)
+    function link(label, to) {
+      return crel('a', { href: to }, label)
+    }
+    viewport.appendChild(link("google", "http://google.com"))
+
+    // components are often nested
+    function menu(items) {
+      return crel('nav',
+        crel('ul',
+          items.map(i => crel('li', link(i.label, i.to)))))
+    }
+    viewport.appendChild(menu([
+      { label: "Home", to: "/home" },
+      { label: "Contact", to: "/contact" },
+      { label: "About", to: "/about" },
+    ]))
+  </script>
+</body>
+
+</html>
