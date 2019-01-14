@@ -32,4 +32,4 @@ We kunnen deze snapshots dan doorsturen naar andere computers.
 * https://en.wikipedia.org/wiki/Git
 * https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
 * https://code.visualstudio.com/docs/editor/versioncontrol#_git-support
-
+* http://rogerdudler.github.io/git-guide/
