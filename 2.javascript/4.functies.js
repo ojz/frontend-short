@@ -53,3 +53,25 @@ const moveRobot = position => {
   moveTo(position)
   turnEnginesOff()
 }
+
+
+// closures
+function counter() {
+  let count = 0
+  return function () {
+    count = count + 1
+    return count
+  }
+}
+
+let ctra = counter()
+let ctrb = counter()
+
+console.log("count: a: ", ctra())
+console.log("count: a: ", ctra())
+console.log("count: a: ", ctra())
+console.log("count: a: ", ctra())
+
+console.log("count: b: ", ctrb())
+console.log("count: b: ", ctrb())
+
