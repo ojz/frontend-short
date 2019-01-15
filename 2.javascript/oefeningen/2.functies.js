@@ -22,7 +22,7 @@ assert.equal(max3(0, 0, 1), 1)
 assert.equal(max3(-1, 1, 0), 1)
 
 
-//* gegeven de volgende code:
+//* BONUS: gegeven de volgende code:
 function pair(left, right) {
   return function (f) {
     return f(left, right)
