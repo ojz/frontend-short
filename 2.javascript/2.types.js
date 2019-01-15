@@ -26,9 +26,23 @@ Math.random()     // 0.7045648095444397
 "You chose: " + (5).toFixed(0)      // beter
 
 
-// niet doen:
-{ } +[]
-'' + {}
+// dit probleem manifesteert zich vooral bij vergelijkingen en in
+// "if" statements
+let name = ""
+if (name) {}                        // niet doen!
+if (name !== "") {}                 // veel beter
+
+
+// nooit gebruiken!
+"0" == false                        // true?
+false == 0                          // true??
+0 == []                             // true???
+([]) == "0"                         // false??!!!?
+
+
+// gebruik gewoon altijd === en !== ipv == en !=.
+// deze varianten doen geen type conversions
+"0" === false                       // false, zoals verwacht
 
 
 // in javascript is het de waarde (niet de variabele) die een type heeft.

@@ -38,6 +38,6 @@ if (fuelAvailable >= fuelRequired) {
 
 
 // and
-if (fuelAvailable >= fuelRequired && engineStatus == 'ready') {
+if (fuelAvailable >= fuelRequired && engineStatus === 'ready') {
   console.log("lets go")
 }
