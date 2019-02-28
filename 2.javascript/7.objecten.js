@@ -39,28 +39,3 @@ for (let i = 0; i < keys.length; i = i + 1) {
   const key = keys[i]
   console.log("De waarde van", key, "is", obj[key])
 }
-
-
-// functies in een object noemen we methodes
-obj.quux = function (n) {
-  return n * 2
-}
-obj.quux(5)
-
-
-// een methode kan naar het object waarin ie zit verwijzen
-obj.goop = function (n) {
-  return n * this.foo
-}
-obj.goop(321)
-
-
-// prototypes (gebruiken we amper)
-const prot = {
-  wabl: 987,
-  sprot: function (n) {
-    return this.wabl + (this.foo * n)
-  }
-}
-obj.__proto__ = prot
-console.log(obj.sprot(2))
