@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- @TODO: add pureCSS -->
+</head>
+
+<body>
+    <p>The "never date anyone under half your age plus seven" rule is a rule of thumb sometimes used to prejudge
+        whether an age difference is socially acceptable. Although the origin of the rule is unclear, it is
+        sometimes considered to have French origin.</p>
+
+    <form>
+        <label for="age">Your age:</label>
+        <input id="age" type="text">
+
+        <label for="minAge">Minimum age:</label>
+        <input id="minAge" readonly type="text">
+
+        <button type="button" id="calculate">
+            Calculate
+        </button>
+    </form>
+
+    <script>
+        // we get references to the elements in the familiar way:
+        const ageInput = document.getElementById('age')
+        const minAgeInput = document.getElementById('minAge')
+        const calculateBtn = document.getElementById('calculate')
+
+        function calculate() {
+            // @TODO:
+
+            // implement the calculate function.
+            // use parseInt to convert a string to a number.
+            // use "element.value" to access the value of an input element.
+        }
+
+        // The next line uses the DOM api to ensure that the 
+        // calculate function is executed when the calculate button
+        // receives a "click" event:
+        calculateBtn.addEventListener('click', calculate)
+
+        // @TODO:
+        // Use the DOM api to ensure that the calculate function
+        // is executed whenever the form element receives an
+        // "input" event.
+    </script>
+</body>
+
+</html>
