@@ -1,0 +1,69 @@
+DOM Event model:
+
+- in the DOM, we have a tree of elements
+
+- elements can emit "events" 
+
+- events have a TYPE and a PAYLOAD
+
+- common event TYPES include:
+    - click
+    - mouseover / mouseout
+    - input
+    - keypress
+
+- the PAYLOAD contains information about the
+  the event.
+    - what element emitted the event
+    - where was the mouse clicked
+    - what key was pressed
+
+- event handlers are functions which are 
+  called by the browser when a certain type
+  of event is emitted
+
+- you can add event handlers to an element
+  by using the DOM API
+
+  element.addEventListener(type, callback)
+
+- a callback is a function which is executed
+  by the browser. You do not call these yourself!
+  You only pass them to API calls.
+
+- events "bubble up"
+
+  after an elements event handlers are executed,
+  the event "bubbles up" and the event handlers
+  of the parent element are executed.
+
+  this means that we can put an event handler
+  on the root element of the document to react
+  to all events.
+
+---
+
+Example 1:
+
+	<button id="hello">Say Hello !</button>
+
+	const hello = document.getElementById('hello')
+    hello.addEventListener('click', function (event) { 
+        alert('Hello!')
+    })
+
+---
+
+Example 2:
+
+	<div id="actions">
+		<button>Edit</button>
+		<button>Delete</button>
+		<button>Share</button>
+	</div>
+
+    const actions = document.getElementById('actions')
+    actions.addEventListener('click', function (event) {
+        const button = event.target
+        alert(button.innerText)
+    })
