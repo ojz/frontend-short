@@ -41,6 +41,15 @@ DOM Event model:
   on the root element of the document to react
   to all events.
 
+- some events have a default behaviour
+	- if you click a link a new page is loaded
+	- if you press a key it will insert a letter
+
+- you can stop this default behaviour using
+  the preventDefault call:
+
+  event.preventDefault()
+
 ---
 
 Example 1:
